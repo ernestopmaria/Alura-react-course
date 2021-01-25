@@ -18,6 +18,7 @@ background-image:url(${db.bg});
 flex:1;
 background-size:cover;
 background-position:center;
+
 `;
 
 const Widget =styled.div`
@@ -27,6 +28,7 @@ border:1px solid #4caf50;
 background-color:#1c1814;
 border-radius:4px;
 overflow:hidden;
+
 h1, h2, h3 {
     font-size: 16px;
     font-weight: 700;
