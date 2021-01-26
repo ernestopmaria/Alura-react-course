@@ -1,10 +1,13 @@
-import styled from 'styled-components'
+/* eslint-disable react/jsx-filename-extension */
+import React from 'react';
+import styled from 'styled-components';
+import Head from 'next/head';
+import { useRouter } from 'next/router';
 import db from '../db.json';
 import Widget from '../src/components/Widget/index';
-import GitHubCorner from '../src/components/GitHubCorner/index'
-import QuizBackground from '../src/components/QuizBackground/index'
-import Footer from '../src/components/Footer/'
-import Head from 'next/head'
+import GitHubCorner from '../src/components/GitHubCorner/index';
+import QuizBackground from '../src/components/QuizBackground/index';
+import Footer from '../src/components/Footer';
 
 export const QuizContainer = styled.div`
   width: 100%;
@@ -17,7 +20,6 @@ export const QuizContainer = styled.div`
   }
 `;
 
-
 /* const BackgroundImage = styled.div`
 background-image:url(${db.bg});
 flex:1;
@@ -26,9 +28,9 @@ background-position:center;
 
 `; */
 
-
-
 export default function Home() {
+  const router = useRouter();
+  const name = 'nelson';
   return (
     <QuizBackground backgroundImage={db.bg}>
       <QuizContainer>
@@ -38,25 +40,36 @@ export default function Home() {
           </title>
         </Head>
         <Widget>
-        <Widget.Header>
-          <h1>Lendas da musica Brasileira</h1>
-        </Widget.Header>
+          <Widget.Header>
+            <h1>Lendas da musica Brasileira</h1>
+          </Widget.Header>
           <Widget.Content>
-               
-       <p>testun jknlkjd kljkwjdkwjli</p>
+            <form onSubmit={function (event) {
+              event.preventDefault();
+              router.push(`/quiz?name=${name}`);
+              console.log('teste');
+            }}
+            >
+              <input placeholder="Insira seu nome" id="nome" />
+              <button type="submit">
+                Jogar
+                {' '}
+                {name}
+              </button>
+            </form>
           </Widget.Content>
-      
+
         </Widget>
         <Widget>
-        <Widget.Content>
-        
-       <p>testun jknlkjd kljkwjdkwjli</p>
-       </Widget.Content>
+          <Widget.Content>
+
+            <p>testun jknlkjd kljkwjdkwjli</p>
+          </Widget.Content>
         </Widget>
-        <Footer/>
-        <GitHubCorner projectUrl="https://github.com/ernestopmaria/Alura-react-course "/>
+        <Footer />
+        <GitHubCorner projectUrl="https://github.com/ernestopmaria/Alura-react-course " />
       </QuizContainer>
-      
+
     </QuizBackground>
   );
 }
