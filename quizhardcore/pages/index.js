@@ -30,7 +30,8 @@ background-position:center;
 
 export default function Home() {
   const router = useRouter();
-  const name = React.useState('');
+  const [name, setName] = React.useState('');
+  console.log('retorno do useState', name, setName)
 
   return (
     <QuizBackground backgroundImage={db.bg}>
@@ -53,8 +54,8 @@ export default function Home() {
             >
               <input
                 onChange={function (infoDoEvento) {
-                  name = infoDoEvento.target.value;
-                  console.log(name);
+                  //name = infoDoEvento.target.value;
+                  setName(infoDoEvento.target.value)
                 }}
                 placeholder="Insira seu nome"
               />
