@@ -4,6 +4,7 @@ import Widget from '../src/components/Widget/index';
 import GitHubCorner from '../src/components/GitHubCorner/index'
 import QuizBackground from '../src/components/QuizBackground/index'
 import Footer from '../src/components/Footer/'
+import Head from 'next/head'
 
 export const QuizContainer = styled.div`
   width: 100%;
@@ -31,6 +32,11 @@ export default function Home() {
   return (
     <QuizBackground backgroundImage={db.bg}>
       <QuizContainer>
+        <Head>
+          <title>
+            Quiz Dificil
+          </title>
+        </Head>
         <Widget>
         <Widget.Header>
           <h1>Lendas da musica Brasileira</h1>
