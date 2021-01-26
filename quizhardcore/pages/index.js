@@ -30,7 +30,8 @@ background-position:center;
 
 export default function Home() {
   const router = useRouter();
-  const name = 'nelson';
+  const name = React.useState('');
+
   return (
     <QuizBackground backgroundImage={db.bg}>
       <QuizContainer>
@@ -50,10 +51,15 @@ export default function Home() {
               console.log('teste');
             }}
             >
-              <input placeholder="Insira seu nome" id="nome" />
-              <button type="submit">
+              <input
+                onChange={function (infoDoEvento) {
+                  name = infoDoEvento.target.value;
+                  console.log(name);
+                }}
+                placeholder="Insira seu nome"
+              />
+              <button type="submit" disabled={name.length === 0}>
                 Jogar
-                {' '}
                 {name}
               </button>
             </form>
