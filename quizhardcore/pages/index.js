@@ -8,6 +8,8 @@ import Widget from '../src/components/Widget/index';
 import GitHubCorner from '../src/components/GitHubCorner/index';
 import QuizBackground from '../src/components/QuizBackground/index';
 import Footer from '../src/components/Footer';
+import Input from '../src/components/Input';
+import Button from '../src/components/Button';
 
 export const QuizContainer = styled.div`
   width: 100%;
@@ -31,7 +33,7 @@ background-position:center;
 export default function Home() {
   const router = useRouter();
   const [name, setName] = React.useState('');
-  console.log('retorno do useState', name, setName)
+  console.log('retorno do useState', name, setName);
 
   return (
     <QuizBackground backgroundImage={db.bg}>
@@ -46,23 +48,23 @@ export default function Home() {
             <h1>Lendas da musica Brasileira</h1>
           </Widget.Header>
           <Widget.Content>
-            <form onSubmit={function (event) {
+            <form onSubmit={(event) => {
               event.preventDefault();
               router.push(`/quiz?name=${name}`);
               console.log('teste');
             }}
             >
-              <input
-                onChange={function (infoDoEvento) {
-                  //name = infoDoEvento.target.value;
-                  setName(infoDoEvento.target.value)
+              <Input
+                onChange={(infoDoEvento) => {
+                  // name = infoDoEvento.target.value;
+                  setName(infoDoEvento.target.value);
                 }}
                 placeholder="Insira seu nome"
               />
-              <button type="submit" disabled={name.length === 0}>
+              <Button type="submit" disabled={name.length === 0}>
                 Jogar
                 {name}
-              </button>
+              </Button>
             </form>
           </Widget.Content>
 
