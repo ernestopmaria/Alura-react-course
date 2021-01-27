@@ -13,6 +13,7 @@ const ButtonBase = styled.button`
   color: ${({ theme }) => theme.colors.contrastText};
   background-color: ${({ theme }) => theme.colors.primary};
   border-radius: ${({ theme }) => theme.borderRadius};
+  font-weight:bold;
   
   outline: 0;
   margin-bottom: 25px;`;
@@ -27,8 +28,7 @@ export default function Button({ type, disabled, ...props }) {
   );
 }
 Button.propTypes = {
-  type: PropTypes.func.isRequired,
+  type: PropTypes.string.isRequired,
   disabled: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
 
 };

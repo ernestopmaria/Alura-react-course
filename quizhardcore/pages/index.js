@@ -33,6 +33,7 @@ background-position:center;
 export default function Home() {
   const router = useRouter();
   const [name, setName] = React.useState('');
+  // eslint-disable-next-line no-console
   console.log('retorno do useState', name, setName);
 
   return (
@@ -51,6 +52,7 @@ export default function Home() {
             <form onSubmit={(event) => {
               event.preventDefault();
               router.push(`/quiz?name=${name}`);
+              // eslint-disable-next-line no-console
               console.log('teste');
             }}
             >
@@ -60,10 +62,11 @@ export default function Home() {
                   setName(infoDoEvento.target.value);
                 }}
                 placeholder="Insira seu nome"
+                value={name}
               />
               <Button type="submit" disabled={name.length === 0}>
-                Jogar
-                {name}
+                {`JOGAR  ${name}`}
+
               </Button>
             </form>
           </Widget.Content>
@@ -72,7 +75,7 @@ export default function Home() {
         <Widget>
           <Widget.Content>
 
-            <p>testun jknlkjd kljkwjdkwjli</p>
+            <p>Comece a guerra</p>
           </Widget.Content>
         </Widget>
         <Footer />
