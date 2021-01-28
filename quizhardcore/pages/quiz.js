@@ -65,6 +65,8 @@ function QuizQuetions({
           })}
 
           <Button type="submit">Confirmar</Button>
+          <p>Você acertou</p>
+          <p>Você errou</p>
         </form>
       </Widget.Content>
 
