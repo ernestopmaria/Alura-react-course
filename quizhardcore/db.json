@@ -1,18 +1,18 @@
 {
-    "bg": "https://wallpapercave.com/wp/wp3315917.jpg",
+    "bg": "https://i.pinimg.com/originals/4d/b8/df/4db8dff0fb2d1a68b6c8406629182695.jpg",
     "title": "Quiz CSS da Alura",
     "description": "Teste os seus conhecimentos sobre CSS e vamos ver quantos layouts você vai deixar de quebrar",
     "questions": [
       {
-        "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
-        "title": "Como fazer um seletor por id via CSS?",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Rotating_earth_%28large%29.gif",
+        "title": "Qual é a Capital de Angola?",
         "description": "Essa é pra aquecer",
-        "answer": 2,
+        "answer": 4,
         "alternatives": [
-          ".elemento",
-          "*elemento",
-          "#elemento",
-          "%elemento"
+          "Brasilia",
+          "Lisboa",
+          "Maputo",
+          "Luanda"
         ]
       },
       {

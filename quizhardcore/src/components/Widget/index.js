@@ -8,6 +8,7 @@ background-color: ${({ theme }) => theme.colors.mainBg};
 border-radius:4px;
 overflow:hidden;
 
+
 h1, h2, h3 {
     font-size: 16px;
     font-weight: 700;
@@ -26,17 +27,19 @@ Widget.Header = styled.header`
   justify-content: flex-start;
   align-items: center;
   padding: 18px 32px;
-  background-color: ${({ theme }) => theme.colors.primary};
-  
+  background-color:black;
+
   * {
     margin: 0;
   }
 `;
 
 Widget.Content = styled.div`
+opacity: .9;
   padding: 24px 32px 32px 32px;
   & > *:first-child {
     margin-top: 0;
+
   }
   & > *:last-child {
     margin-bottom: 0;

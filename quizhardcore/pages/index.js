@@ -28,14 +28,12 @@ export default function Home() {
         </Head>
         <Widget>
           <Widget.Header>
-            <h1>Lendas da musica Brasileira</h1>
+            <h1>Mostre-nos que conheces o Mapa do mundo</h1>
           </Widget.Header>
           <Widget.Content>
             <form onSubmit={(event) => {
               event.preventDefault();
               router.push(`/quiz?name=${name}`);
-              // eslint-disable-next-line no-console
-              console.log('teste');
             }}
             >
               <Input
@@ -56,8 +54,7 @@ export default function Home() {
         </Widget>
         <Widget>
           <Widget.Content>
-
-            <p>Comece a guerra</p>
+            <h2>Acerte a capital de cada País</h2>
           </Widget.Content>
         </Widget>
         <Footer />
