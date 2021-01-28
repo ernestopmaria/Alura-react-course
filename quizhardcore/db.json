@@ -17,8 +17,8 @@
       },
       {
         "image": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Rotating_earth_%28large%29.gif",
-        "title": "Como fazer um background gradiente com css?",
-        "description": "Qual é a Capital do Brasil?",
+        "title": "Qual é a Capital do Brasil?",
+        "description":"Se falhar essa pode tomar veneno kk",
         "answer": 3,
         "alternatives": [
            "Rio de Janeiro",
@@ -29,8 +29,8 @@
       },
       {
         "image": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Rotating_earth_%28large%29.gif",
-        "title": "Como fazer um background gradiente com css?",
-        "description": "Qual é a Capital de Portugal",
+        "title": "Qual é a Capital de Portugal",
+        "description": "Essa é bobeira lol",
         "answer": 3,
         "alternatives": [
           "Barcelona",
