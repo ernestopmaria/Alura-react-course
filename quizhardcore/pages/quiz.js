@@ -8,6 +8,7 @@ import QuizBackground from '../src/components/QuizBackground/index';
 
 import QuizContainer from '../src/components/QuizContainer/index';
 import Button from '../src/components/Button';
+import AlternativesForm from '../src/components/AlternativesForm';
 
 function ResultWidget({ results }) {
   return (
@@ -106,7 +107,7 @@ function QuizQuetions({
         <h1>{question.title}</h1>
         <p>{question.description}</p>
 
-        <form onSubmit={(infosDoEvento) => {
+        <AlternativesForm onSubmit={(infosDoEvento) => {
           infosDoEvento.preventDefault();
           setIsQuestionSubmited(true);
           setTimeout(() => {
@@ -119,9 +120,18 @@ function QuizQuetions({
         >
           {question.alternatives.map((alternative, alternativeIndex) => {
             const alternativeId = `alternative_${alternativeIndex}`;
+            const alternativeStatus = isCorrect ? 'SUCCESS' : 'ERROR';
+            const isSelected = selectedAlternative === alternativeIndex;
             return (
-              <Widget.Topic as="label" key={alternativeId} htmlFor={alternativeId}>
+              <Widget.Topic
+                as="label"
+                key={alternativeId}
+                htmlFor={alternativeId}
+                data-selected={isSelected}
+                data-status={isQuestionSubmited && alternativeStatus}
+              >
                 <input
+                  style={{ display: 'none' }}
                   id={alternativeId}
                   onChange={() => setSelectedAlternative(alternativeIndex)}
                   type="radio"
@@ -133,9 +143,9 @@ function QuizQuetions({
           })}
 
           <Button type="submit" disabled={!hasAlternativeSelected}>Confirmar</Button>
-          {isQuestionSubmited && isCorrect && <p style={{ backgroundColor: 'green', padding: '12px', borderRadius: '6% ' }}>Você acertou!</p>}
-          {isQuestionSubmited && !isCorrect && <p style={{ backgroundColor: 'red', padding: '12px', borderRadius: '6% ' }}>Você errou!</p>}
-        </form>
+          {isQuestionSubmited && isCorrect && <p>Você acertou!</p>}
+          {isQuestionSubmited && !isCorrect && <p>Você errou!</p>}
+        </AlternativesForm>
       </Widget.Content>
 
     </Widget>
