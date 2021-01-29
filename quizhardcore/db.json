@@ -7,7 +7,7 @@
         "image": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Rotating_earth_%28large%29.gif",
         "title": "Qual é a Capital de Angola?",
         "description": "Essa é pra aquecer",
-        "answer": 4,
+        "answer": 3,
         "alternatives": [
           "Brasilia",
           "Lisboa",
@@ -19,7 +19,7 @@
         "image": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Rotating_earth_%28large%29.gif",
         "title": "Qual é a Capital do Brasil?",
         "description":"Se falhar essa pode tomar veneno kk",
-        "answer": 3,
+        "answer": 2,
         "alternatives": [
            "Rio de Janeiro",
            "Madrid",
@@ -31,7 +31,7 @@
         "image": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Rotating_earth_%28large%29.gif",
         "title": "Qual é a Capital de Portugal",
         "description": "Essa é bobeira lol",
-        "answer": 3,
+        "answer": 2,
         "alternatives": [
           "Barcelona",
           "Whindoek",
